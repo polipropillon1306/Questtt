@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">athena-space-quest</string>
+    <string name="title_activity_main">athena-space-quest</string>
+    <string name="package_name">com.inaya.athenaspacequest</string>
+    <string name="custom_url_scheme">com.inaya.athenaspacequest</string>
+</resources>
