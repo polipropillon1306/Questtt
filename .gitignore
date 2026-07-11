@@ -10,6 +10,12 @@ build/
 android/.gradle/
 android/build/
 android/app/build/
+android/bin/
+android/gen/
+android/out/
+android/proguard/
+android/.externalNativeBuild/
+android/.cxx/
 android/app/src/main/assets/public/
 android/app/src/main/assets/capacitor.config.json
 android/app/src/main/assets/capacitor.plugins.json
@@ -18,9 +24,12 @@ android/capacitor-cordova-android-plugins/
 
 # Local machine files
 .idea/
+android/.idea/
 *.iml
 local.properties
 android/local.properties
+android/.navigation/
+android/captures/
 
 # Release artifacts
 *.apk
@@ -34,4 +43,5 @@ android/keystore.properties
 
 # Logs and caches
 *.log
+*.hprof
 .DS_Store
