@@ -53,12 +53,13 @@ function App() {
               textShadow: '0 2px 4px rgba(0,0,0,0.8)'
             }}
           >
-            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '40px', borderRadius: '20px', textAlign: 'center', backdropFilter: 'blur(10px)' }}>
+            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '40px', borderRadius: '20px', textAlign: 'center', backdropFilter: 'blur(10px)', margin: '20px' }}>
               <h1 style={{ fontSize: '3.5rem', margin: '0 0 10px 0', color: '#fbbf24' }}>Космос Афины</h1>
               <p style={{ fontSize: '1.5rem', marginBottom: '40px' }}>Приключения Инайи и Афины</p>
               <button 
+                type="button"
                 onClick={() => setCurrentLevel('level1')}
-                style={{ fontSize: '1.8rem', padding: '16px 40px', borderRadius: '50px', background: '#3b82f6', border: '4px solid white' }}
+                style={{ fontSize: '1.8rem', padding: '16px 40px', borderRadius: '50px', background: '#3b82f6', border: '4px solid white', outline: 'none', userSelect: 'none' }}
               >
                 Начать квест!
               </button>
@@ -100,7 +101,6 @@ function App() {
                 bottom: '25%',
                 right: '15%',
                 width: '120px',
-                cursor: 'pointer',
                 filter: bunnyFound ? 'drop-shadow(0 0 20px #fff)' : 'none',
                 opacity: bunnyFound ? 1 : 0.8
               }}
@@ -111,7 +111,7 @@ function App() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 onClick={() => setCurrentLevel('level2')}
-                style={{ position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)', fontSize: '1.5rem', padding: '15px 40px' }}
+                style={{ position: 'absolute', bottom: 40, right: '0', transform: 'translateX(-50%)', fontSize: '1.5rem', padding: '15px 40px' }}
               >
                 Идем в лабораторию!
               </motion.button>
@@ -146,7 +146,7 @@ function App() {
               <motion.div 
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setLabMessage('Ой, не та кнопка! Наука требует точности. Нужна СИНЯЯ.')}
-                style={{ width: 80, height: 80, background: '#ef4444', borderRadius: '50%', border: '6px solid #b91c1c', cursor: 'pointer', boxShadow: '0 10px 0 #991b1b' }} 
+                style={{ width: 80, height: 80, background: '#ef4444', borderRadius: '50%', border: '6px solid #b91c1c', boxShadow: '0 10px 0 #991b1b' }} 
               />
               <motion.div 
                 whileTap={{ scale: 0.9 }}
@@ -155,12 +155,12 @@ function App() {
                   setLabPassed(true);
                   triggerConfetti();
                 }}
-                style={{ width: 100, height: 100, background: '#3b82f6', borderRadius: '50%', border: '6px solid #1d4ed8', cursor: 'pointer', boxShadow: '0 10px 0 #1e40af' }} 
+                style={{ width: 100, height: 100, background: '#3b82f6', borderRadius: '50%', border: '6px solid #1d4ed8', boxShadow: '0 10px 0 #1e40af' }} 
               />
               <motion.div 
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setLabMessage('Это зеленая. Инайя говорит: проверяй внимательно! Нужна СИНЯЯ.')}
-                style={{ width: 80, height: 80, background: '#22c55e', borderRadius: '50%', border: '6px solid #15803d', cursor: 'pointer', boxShadow: '0 10px 0 #166534' }} 
+                style={{ width: 80, height: 80, background: '#22c55e', borderRadius: '50%', border: '6px solid #15803d', boxShadow: '0 10px 0 #166534' }} 
               />
             </div>
 
@@ -231,7 +231,6 @@ function App() {
                     background: isClicked ? '#fbbf24' : '#fff',
                     borderRadius: '50%',
                     boxShadow: isClicked ? '0 0 30px #fbbf24' : '0 0 10px #fff',
-                    cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
