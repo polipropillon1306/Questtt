@@ -45,3 +45,4 @@ android/keystore.properties
 *.log
 *.hprof
 .DS_Store
+.merge-backups/
